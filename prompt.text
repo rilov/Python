@@ -1,0 +1,11 @@
+"Generate a comprehensive technical documentation for a COBOL program. The documentation should begin with an introduction that explains the purpose of the program and its intended use within a banking system for processing transactions. Include a section on prerequisites that outlines the necessary system environment, COBOL version, and any other software dependencies required to run the program.
+
+Follow with a detailed description of the program structure, highlighting the DATA DIVISION for defining data elements, the PROCEDURE DIVISION for logic and processing steps, and any other relevant divisions. Provide examples of key COBOL statements used within the program and their purpose, such as how files are opened, read, and closed, and how transactions are processed.
+
+Incorporate a section on how to compile and run the program, including any specific compiler options or runtime settings that are necessary. Explain the expected inputs, such as transaction files or database connections, and describe the format and content of these inputs.
+
+Describe the expected outputs of the program, including any files generated or database updates performed. Include error handling strategies and how the program logs or communicates errors.
+
+Conclude with best practices for maintaining and updating the program, addressing common issues or pitfalls to avoid. Highlight any sections of the code that are critical for performance or reliability, and suggest potential areas for future enhancement or refactoring.
+
+Ensure the documentation is clear, concise, and accessible to both experienced COBOL developers and those new to the language, facilitating easy understanding, deployment, and maintenance of the program."
