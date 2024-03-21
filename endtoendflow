@@ -1,0 +1,24 @@
+graph TD;
+    style DevelopmentProcess fill:#f9f,stroke:#333,stroke-width:2px;
+    style ErrorHandling fill:#f9f,stroke:#333,stroke-width:2px;
+    style SuccessPath fill:#f9f,stroke:#333,stroke-width:2px;
+
+    subgraph DevelopmentProcess
+    A[Mama Loader] -->|Call Impact API| B(Retrieve Code)
+    B -->|Save to Mama DB| C(Mama DB)
+    C -->|Load Code| D[Mama Converter Module]
+    D -->|Call Compiler JCL| F(Mainframe)
+    F -->|Compile Codes| G{Error?}
+    end
+
+    subgraph ErrorHandling
+    G --> Yes -->|Send Error Message & Code to GenAI| H(GenAI)
+    H -->|Prompt to Fix Compilation Errors| D
+    end
+
+    subgraph SuccessPath
+    G --> No -->|Put Compiled Code in Mama Compiled Library| I(Mama Compiled Library)
+    I -->|Check code into GitHub| J(GitHub)
+    J -->|Trigger Automated Build| K(Build System)
+    K -->|Deploy Code| L(Deployment System)
+    end
